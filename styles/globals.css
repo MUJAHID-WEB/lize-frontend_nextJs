@@ -1,0 +1,166 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: Creattion;
+  src: url("/fonts/Creattion.ttf") format("trueType");
+}
+
+.slick-slide {
+  position: relative;
+}
+.slick-list {
+  width: 100%;
+}
+.slick-list,
+.slick-track {
+  height: 100%;
+}
+.slick-dots {
+  bottom: 25px;
+}
+
+.planeItems .slick-slide {
+  margin: 0 6px;
+}
+.slick-dots li button::before {
+  content: "";
+  border-radius: 50%;
+  background: #ffffff;
+  width: 12px;
+  height: 12px;
+  transition: all linear 0.2s;
+}
+.slick-dots li.slick-active button::before {
+  width: 24px;
+  border-radius: 10px;
+  opacity: 1;
+}
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+  body {
+    @apply font-poppins overflow-x-hidden;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+  }
+
+  ul,
+  ol {
+    list-style-type: none;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  img {
+    vertical-align: middle;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply rounded-[10px] border-[3px] py-5 capitalize lg:text-sm lg:font-bold xl:py-4 xl:text-base;
+  }
+  .btn-primary {
+    @apply btn border-primary bg-primary text-white-primary;
+  }
+  .btn-secondary {
+    @apply btn border-primary bg-transparent text-primary;
+  }
+  .btn-tertiary {
+    @apply btn border-[1px] border-gray  bg-transparent text-gray;
+  }
+  .btn-white-primary {
+    @apply btn border-white-primary bg-white-primary text-primary;
+  }
+  .btn-white-secondary {
+    @apply btn border-white-primary text-white-primary;
+  }
+  .btn-white-tertiary {
+    @apply btn border-white-primary bg-white-primary text-black-primary;
+  }
+  .heroGradient {
+    background: linear-gradient(
+      263.98deg,
+      #6096e0 43.73%,
+      #679de3 52.81%,
+      #619be4 80.21%,
+      #5b95de 94.69%
+    );
+  }
+
+  .planeGradient {
+    background: linear-gradient(
+      180deg,
+      #3f70aa 0%,
+      #3d6ca4 12.17%,
+      #3e71aa 18.37%,
+      #4a7db6 75.48%
+    );
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center center;
+  }
+  .cargoPolygon {
+    clip-path: polygon(0% 0%, 87% 0, 100% 11%, 100% 99%, 0% 100%);
+  }
+
+  .mainHeader {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.05);
+  }
+  .dashboardHeader {
+    box-shadow: 0 16px 16px rgba(17, 120, 255, 0.05);
+  }
+  .dropdown {
+    box-shadow: 0 5px 16px rgba(0, 0, 0, 0.05);
+  }
+  .layoutShadow {
+    box-shadow: 0 10px 0 0 #edf2f6;
+  }
+  .reservationShadow {
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  }
+  .layoutInvertedShadow {
+    box-shadow: 0 -10px 0 0 #edf2f6;
+  }
+  .roundCorner {
+    filter: url(#round) !important;
+  }
+  .polygonImage {
+    clip-path: polygon(50% 0, 100% 30%, 100% 70%, 50% 100%, 0 70%, 0 30%);
+    z-index: 50;
+  }
+  .polygonImage::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    inset: 0;
+    z-index: -10;
+  }
+  .overlay {
+    background: linear-gradient(
+      186deg,
+      rgba(0, 0, 0, 0) 40%,
+      rgb(0, 0, 0, 0.5) 125%
+    );
+  }
+
+  .history {
+    clip-path: polygon(0 11%, 7% 0, 100% 0, 100% 100%, 0 100%);
+  }
+
+  .experience-shadow {
+    filter: drop-shadow(11px 37px 69px rgba(114, 173, 215, 0.54));
+  }
+}
